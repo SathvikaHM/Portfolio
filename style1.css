@@ -1,0 +1,251 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+/* ================= NAVBAR ================= */
+header{
+  position:sticky;
+  top:0;
+  background:#020617;
+  z-index:100;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:2.2rem;
+}
+.logo span{
+  color:#38bdf8;
+}
+
+.nav ul{
+  list-style:none;
+  display:flex;
+  gap:2rem;
+}
+
+.nav a{
+  text-decoration:none;
+  color:white;
+  font-size:1.6rem;
+  position:relative;
+}
+
+.nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#38bdf8;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+.nav a:hover::after{
+  width:100%;
+}
+
+/* ================= HERO ================= */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  gap:4rem;
+  flex-wrap:wrap;
+}
+
+/* PROFILE IMAGE */
+.hero-image img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #38bdf8;
+  box-shadow:0 0 40px rgba(56,189,248,.5);
+
+  /* 👇 YOUR ADDED EFFECT */
+  filter: grayscale(10%) contrast(105%);
+  transition: 0.4s ease;
+}
+
+.hero-image img:hover{
+  filter: grayscale(0%) contrast(110%);
+  transform: scale(1.05);
+}
+
+.hero-text h1{
+  font-size:4rem;
+}
+.hero-text span{
+  color:#38bdf8;
+}
+.hero-text p{
+  margin:1rem 0;
+  font-size:1.8rem;
+}
+
+/* ROLE CARDS */
+.role-cards{
+  display:flex;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+
+.role{
+  padding:1rem 2rem;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  font-size:1.4rem;
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:6rem 2rem;
+}
+
+.section-title{
+  text-align:center;
+  font-size:3.5rem;
+  margin-bottom:4rem;
+}
+
+/* ================= SKILLS ================= */
+.timeline{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  gap:2rem;
+}
+
+.timeline-box{
+  padding:2.5rem;
+  background:#020617;
+  border-left:5px solid #38bdf8;
+}
+
+.timeline-box h3{
+  font-size:2rem;
+  margin-bottom:.5rem;
+}
+
+/* ================= PROJECTS ================= */
+.project-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
+
+.project-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.project-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  transition:transform .4s, box-shadow .4s;
+}
+
+.project-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.project-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 25px 40px rgba(56,189,248,.2);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,.85);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:.4s;
+}
+
+.project-card:hover .overlay{
+  opacity:1;
+}
+
+.overlay h3{
+  font-size:2rem;
+}
+
+.overlay span{
+  font-size:1.4rem;
+  color:#38bdf8;
+}
+
+/* ================= CONTACT ================= */
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+
+.contact-card{
+  background:#020617;
+  padding:2rem;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  font-size:1.6rem;
+  text-decoration:none;
+  color:white;
+  transition:.4s;
+}
+
+.contact-card i{
+  font-size:2.5rem;
+  color:#38bdf8;
+}
+
+.contact-card:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 20px 40px rgba(56,189,248,.4);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:2rem;
+  background:#020617;
+  font-size:1.4rem;
+}

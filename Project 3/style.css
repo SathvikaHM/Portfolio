@@ -1,0 +1,118 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* PARALLAX */
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 🔥 PARALLAX WORKS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUNDS */
+.hero {
+  background-image: url("images/image1.jpg");
+}
+
+.mid {
+  background-image: url("images/image2.jpg");
+  min-height: 70vh;
+}
+
+.end {
+  background-image: url("images/image3.jpg");
+  min-height: 70vh;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 20px 40px;
+}
+
+.content h1 {
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+}
+
+.content h2 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+/* ANIMATION (SAFE) */
+.animate {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.glass:hover {
+  transform: translateY(-8px);
+}
+
+/* INFO SECTIONS */
+.info {
+  padding: 70px 90px;
+  text-align: center;
+}
+
+.light {
+  background: #f5f7fa;
+  color: #333;
+}
+
+.dark {
+  background: #1f2933;
+  color: #e5e7eb;
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 25px;
+}
